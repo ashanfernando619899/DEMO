@@ -1,0 +1,40 @@
+# =========================================
+# OUTPUT
+# =========================================
+
+# I'm a Dog, I can run!!
+
+
+# =========================================
+# EXPLANATION OF FACTORY DESIGN PATTERN
+# =========================================
+
+# 1. The client does not directly create Dog() or Cat()
+# 2. The factory classes handle object creation
+# 3. This reduces tight coupling in the program
+# 4. The code becomes easier to maintain and extend
+# 5. New animal types can be added easily in future
+
+
+# =========================================
+# CLASSES AND SUBCLASSES IN THIS CODE
+# =========================================
+
+# Superclass        ->      Subclass
+# -----------------------------------------
+# Factory           ->      DogFactory
+# Factory           ->      CatFactory
+# Animals           ->      Dog
+# Animals           ->      Cat
+
+
+# =========================================
+# BENEFITS OF FACTORY DESIGN PATTERN
+# =========================================
+
+# - Encapsulation of object creation
+# - Better code organization
+# - Easier scalability
+# - Loose coupling
+# - Reusability
+# - Easier maintenance
