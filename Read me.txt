@@ -1,40 +1,53 @@
-# =========================================
-# OUTPUT
-# =========================================
+# Auckland Aquarium Management System
 
-# I'm a Dog, I can run!!
+## Project Description
 
+This project was developed for Week 7 Activity 2.  
+It is a Python CLI-based aquarium management system for an aquarium in Auckland.
 
-# =========================================
-# EXPLANATION OF FACTORY DESIGN PATTERN
-# =========================================
+The system allows the user to enter the number of fish currently available in the aquarium and display the fish name, fish category, and available count.
 
-# 1. The client does not directly create Dog() or Cat()
-# 2. The factory classes handle object creation
-# 3. This reduces tight coupling in the program
-# 4. The code becomes easier to maintain and extend
-# 5. New animal types can be added easily in future
+The fish types included are:
 
+- Goldfish
+- Shark
+- Angelfish
+- Tuna
+- Salmon
 
-# =========================================
-# CLASSES AND SUBCLASSES IN THIS CODE
-# =========================================
+## Design Patterns Used
 
-# Superclass        ->      Subclass
-# -----------------------------------------
-# Factory           ->      DogFactory
-# Factory           ->      CatFactory
-# Animals           ->      Dog
-# Animals           ->      Cat
+This project uses both:
 
+- Factory Design Pattern
+- Singleton Design Pattern
 
-# =========================================
-# BENEFITS OF FACTORY DESIGN PATTERN
-# =========================================
+## Factory Design Pattern
 
-# - Encapsulation of object creation
-# - Better code organization
-# - Easier scalability
-# - Loose coupling
-# - Reusability
-# - Easier maintenance
+The Factory Pattern is used through the `FishFactory` class.
+
+The purpose of the factory is to create fish objects based on the user’s menu selection.
+
+For example:
+
+- Choice 1 creates a `Goldfish` object
+- Choice 2 creates a `Shark` object
+- Choice 3 creates an `Angelfish` object
+- Choice 4 creates a `Tuna` object
+- Choice 5 creates a `Salmon` object
+
+This avoids creating fish objects directly in the client code.
+
+## Singleton Design Pattern
+
+The Singleton Pattern is used in the `AquariumManager` class.
+
+This class manages the SQLite database connection and fish records.
+
+The Singleton Pattern ensures that only one aquarium management object is created during the program execution.
+
+This is proven by creating two objects:
+
+```python
+aquarium1 = AquariumManager()
+aquarium2 = AquariumManager()
