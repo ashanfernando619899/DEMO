@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>BMI Result</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>BMI Calculator Result</h1>
+
+<p>Your BMI is:
+<strong>{{ bmi }}</strong>
+</p>
+
+<p>
+You are classified as:
+<strong>{{ category }}</strong>
+</p>
+
+<a href="/">Calculate Again</a>
+
+</div>
+
+</body>
+
+</html>
